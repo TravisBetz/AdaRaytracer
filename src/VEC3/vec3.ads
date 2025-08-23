@@ -19,16 +19,16 @@ package VEC3 is
    function Get_Unit_Vector(V: VECTOR3; F: Long_Float) return VECTOR3;
 
    -- Basic Operators
-   --  function Plus(V1, V2: VECTOR3) return VECTOR3;
-   --  function Minus(V1, V2 : VECTOR3) return VECTOR3;
-   --  function Dot_Product(V1, V2 : VECTOR3) return Long_Float; -- X1X2 + Y1Y2 + Z1Z2
-   --  function Cross_Product(V1, V2 : VECTOR3) return VECTOR3; --Y1Z2 - Z1Y2, Z1X2 - X1Z2, X1Y2 - Y1X2
-   --  function Hadamard_Product(V1, V2 : VECTOR3) return VECTOR3; -- X1X2, Y1Y2, Z1Z2
+   function Plus(V1, V2: VECTOR3) return VECTOR3;
+   function Minus(V1, V2 : VECTOR3) return VECTOR3;
+   function Dot_Product(V1, V2 : VECTOR3) return Long_Float; -- X1X2 + Y1Y2 + Z1Z2
+   function Cross_Product(V1, V2 : VECTOR3) return VECTOR3; --Y1Z2 - Z1Y2, Z1X2 - X1Z2, X1Y2 - Y1X2
+   function Hadamard_Product(V1, V2 : VECTOR3) return VECTOR3; -- X1X2, Y1Y2, Z1Z2
 
 
    --  -- Procedures
    --  -- Reflections
-   --  procedure Reflect_Across_Origin(V: VECTOR3);
+   -- procedure Reflect_Across_Origin(V: VECTOR3);
    --  procedure Reflect_Across_X_Axis(V: VECTOR3);
    --  procedure Reflect_Across_Y_Axis(V: VECTOR3);
    --  procedure Reflect_Across_Z_Axis(V: VECTOR3);
@@ -43,7 +43,7 @@ package VEC3 is
 
    private 
       type VECTOR3 is record 
-         V3 : XYZAxis := (others => 0.0);
+         XYZ : XYZAxis := (others => 0.0);
       end record;
 
 
