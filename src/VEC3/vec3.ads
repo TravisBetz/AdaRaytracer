@@ -28,15 +28,18 @@ package VEC3 is
 
    --  -- Procedures
    --  -- Reflections
-   -- procedure Reflect_Across_Origin(V: VECTOR3);
-   --  procedure Reflect_Across_X_Axis(V: VECTOR3);
-   --  procedure Reflect_Across_Y_Axis(V: VECTOR3);
-   --  procedure Reflect_Across_Z_Axis(V: VECTOR3);
+   procedure Reflect_Across_Origin(V: in out VECTOR3);
+   procedure Reflect_Across_X_Axis(V: in out VECTOR3);
+   procedure Reflect_Across_Y_Axis(V: in out VECTOR3);
+   procedure Reflect_Across_Z_Axis(V: in out VECTOR3);
    
    --  -- Basic Operators
-   --  procedure Plus_Equal_To(V1, V2 : VECTOR3);
-   --  procedure Minus_Equal_To(V1, V2 : VECTOR3);
-   --  procedure Scale_By_Factor(V : VECTOR3; Scalar : Long_Float);
+   procedure Plus_Equal_To  (V1     : in out VECTOR3; 
+                             V2     : VECTOR3);
+   procedure Minus_Equal_To (V1     : in out VECTOR3; 
+                             V2     : VECTOR3);
+   procedure Scale_By_Factor(V      : in out VECTOR3; 
+                             Scalar : in Long_Float);
 
    -- Debugging
    -- procedure Print_Vector(V: VECTOR3) is separate; -- Fuck my life

@@ -95,6 +95,51 @@ package body VEC3 is
    -- End of functions
 
    -- Procedures
+   procedure Reflect_Across_Origin(V: in out VECTOR3) is 
+   begin 
+      V.XYZ(0) := V.XYZ(0) * (Long_Float((-1)));
+      V.XYZ(1) := V.XYZ(1) * (Long_Float((-1)));
+      V.XYZ(2) := V.XYZ(2) * (Long_Float((-1)));
+   end Reflect_Across_Origin;
+
+   procedure Reflect_Across_X_Axis(V: in out VECTOR3) is 
+   begin 
+      V.XYZ(1) := V.XYZ(1) * (Long_Float((-1)));
+   end Reflect_Across_X_Axis;
+
+   procedure Reflect_Across_Y_Axis(V: in out VECTOR3) is 
+   begin 
+      V.XYZ(0) := V.XYZ(0) * (Long_Float((-1)));
+   end Reflect_Across_Y_Axis;
+
+   procedure Reflect_Across_Z_Axis(V: in out VECTOR3) is 
+   begin 
+      V.XYZ(2) := V.XYZ(2);
+   end Reflect_Across_Z_Axis;
+
+   -- Basic Operators
+   procedure Plus_Equal_To(V1 : in out VECTOR3; 
+                           V2 : VECTOR3) is 
+   begin 
+      V1.XYZ(0) := V1.XYZ(0) + V2.XYZ(0);
+      V1.XYZ(1) := V1.XYZ(1) + V2.XYZ(1);
+      V1.XYZ(2) := V1.XYZ(2) + V2.XYZ(2);
+   end Plus_Equal_To;
+
+   procedure Minus_Equal_To(V1 : in out VECTOR3; 
+                            V2 : VECTOR3) is
+   begin 
+      V1.XYZ(0) := V1.XYZ(0) - V2.XYZ(0);
+      V1.XYZ(1) := V1.XYZ(1) - V2.XYZ(1);
+      V1.XYZ(2) := V1.XYZ(2) - V2.XYZ(2);
+   end Minus_Equal_To;
    
+   procedure Scale_By_Factor(V      : in out VECTOR3; 
+                             Scalar : in Long_Float) is 
+   begin 
+      V.XYZ(0) := V.XYZ(0) * Scalar;
+      V.XYZ(1) := V.XYZ(1) * Scalar;
+      V.XYZ(2) := V.XYZ(2) * Scalar;
+   end Scale_By_Factor;
    
 end VEC3;
