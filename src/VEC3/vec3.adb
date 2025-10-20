@@ -45,11 +45,11 @@ package body VEC3 is
                          Z => V.XYZ(2) / Length));
    end Get_Unit_Vector;
 
-   function Get_Unit_Vector(V: VECTOR3; F: Long_Float) return VECTOR3 is 
+   function Get_Unit_Vector(V: VECTOR3; Length: Long_Float) return VECTOR3 is 
    begin 
-      return (Init_Vec3 (X => V.XYZ(0) / F, 
-                         Y => V.XYZ(1) / F, 
-                         Z => V.XYZ(2) / F));
+      return (Init_Vec3 (X => V.XYZ(0) / Length, 
+                         Y => V.XYZ(1) / Length, 
+                         Z => V.XYZ(2) / Length));
    end Get_Unit_Vector;
    -- End of Getters
 

@@ -16,7 +16,7 @@ package VEC3 is
    function Get_Z(V: VECTOR3) return Long_Float;
    function Get_Length(V: VECTOR3) return Long_Float;
    function Get_Unit_Vector(V: VECTOR3) return VECTOR3;
-   function Get_Unit_Vector(V: VECTOR3; F: Long_Float) return VECTOR3;
+   function Get_Unit_Vector(V: VECTOR3; Length: Long_Float) return VECTOR3;
 
    -- Basic Operators
    function Plus(V1, V2: VECTOR3) return VECTOR3;
