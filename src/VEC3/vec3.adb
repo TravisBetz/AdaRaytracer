@@ -91,6 +91,14 @@ package body VEC3 is
                          Y => V1.XYZ(1) * V2.XYZ(1), 
                          Z => V1.XYZ(2) * V2.XYZ(2)));
    end Hadamard_Product;
+
+   function Scale(V1 : in VECTOR3;
+                  Scalar : in Long_Float) return VECTOR3 is
+   begin 
+      return (Init_Vec3 (X => V1.XYZ(0) * Scalar, 
+                         Y => V1.XYZ(1) * Scalar, 
+                         Z => V1.XYZ(2) * Scalar));
+   end Scale;
    -- End of Basic Operations
    -- End of functions
 

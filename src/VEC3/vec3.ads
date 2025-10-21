@@ -24,7 +24,7 @@ package VEC3 is
    function Dot_Product(V1, V2 : VECTOR3) return Long_Float; -- X1X2 + Y1Y2 + Z1Z2
    function Cross_Product(V1, V2 : VECTOR3) return VECTOR3; --Y1Z2 - Z1Y2, Z1X2 - X1Z2, X1Y2 - Y1X2
    function Hadamard_Product(V1, V2 : VECTOR3) return VECTOR3; -- X1X2, Y1Y2, Z1Z2
-
+   function Scale(V1 : in VECTOR3; Scalar : in Long_Float) return VECTOR3;
 
    --  -- Procedures
    --  -- Reflections
