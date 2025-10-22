@@ -1,6 +1,6 @@
 project Raytracer is
     for Source_Dirs use ("src", "src/PPM", "src/VEC3", 
-                         "src/COLOR/", "src/RAY");
+                         "src/COLOR/", "src/RAY", "src/SHAPES", "src/SHAPES/SPHERE");
     for Object_Dir use "obj";
     for Main use ("main.adb");
 end Raytracer;
